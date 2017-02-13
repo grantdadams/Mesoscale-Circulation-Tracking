@@ -8,3 +8,18 @@
 ## The features are labeled as: 1 = cyclonic region, 2 = cyclonic boundary region, 3 = common waters, 4 = anti-cyclonic boundary region, 5 = anti-cyclonic region.
 
 ##Domingues R, Goni G, Bringas F, et al (2016) Variability of preferred environmental conditions for Atlantic bluefin tuna (Thunnus thynnus) larvae in the Gulf of Mexico during 1993-2011. Fish Oceanogr 25:320–336. doi: 10.1111/fog.12152
+
+```{r pressure, echo=FALSE}
+m=2501
+par(mfrow= c(1,4))
+x<-ssh.recon.cropped
+x[[m]][2] <- - sort(c(abs(maxValue(x[[m]])), abs(minValue(x[[m]]))))[2]
+x[[m]][1] <- sort(c(abs(maxValue(x[[m]])), abs(minValue(x[[m]]))))[2]
+plot(x[[m]], main = "SSH")
+plot(geostrophic.velocity[[m]], main = "Geostrophic velocity")
+crs(x)<-crs("+proj=longlat +ellps=WGS84 +datum=WGS84") 
+plot(terrain(x[[m]], opt = "slope", unit = "degrees"), main = "Slope (degrees)")
+plot(mesoscale.features.raster.stack[[m]], main= "Mesoscale features")
+legend(-95,15, legend = rat[,c(1)], bty = "n")
+legend(-94,15, legend = rat[,c(2)], bty = "n")
+```
