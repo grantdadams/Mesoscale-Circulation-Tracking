@@ -11,14 +11,4 @@
 
 
 
-```
-load("Mesoscale Circulation Examples.RData")
-par(mfrow= c(1,4))
-plot(x, main = "SSH")
-plot(geostrophic.velocity.example, main = "Geostrophic velocity")
-crs(x)<-crs("+proj=longlat +ellps=WGS84 +datum=WGS84") 
-plot(terrain(x, opt = "slope", unit = "degrees"), main = "Slope (degrees)")
-plot(mesoscale.features.raster.example, main= "Mesoscale features")
-legend(-95,15, legend = rat[,c(1)], bty = "n")
-legend(-94,15, legend = rat[,c(2)], bty = "n")
-```
+![alt text](https://github.com/grantdadams/Mesoscale-Circulation-Tracking/blob/master/mesoscale_circulation_example.png "Example")
