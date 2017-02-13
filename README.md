@@ -10,6 +10,10 @@
 ##Domingues R, Goni G, Bringas F, et al (2016) Variability of preferred environmental conditions for Atlantic bluefin tuna (Thunnus thynnus) larvae in the Gulf of Mexico during 1993-2011. Fish Oceanogr 25:320–336. doi: 10.1111/fog.12152
 
 ```{r pressure, echo=FALSE}
+plot(pressure)
+```
+
+```{r pressure, echo=FALSE}
 m=2501
 par(mfrow= c(1,4))
 x<-ssh.recon.cropped
