@@ -11,7 +11,7 @@
 
 
 
-```
+
 load("Mesoscale Circulation Examples.RData")
 par(mfrow= c(1,4))
 plot(x, main = "SSH")
@@ -21,4 +21,3 @@ plot(terrain(x, opt = "slope", unit = "degrees"), main = "Slope (degrees)")
 plot(mesoscale.features.raster.example, main= "Mesoscale features")
 legend(-95,15, legend = rat[,c(1)], bty = "n")
 legend(-94,15, legend = rat[,c(2)], bty = "n")
-```
